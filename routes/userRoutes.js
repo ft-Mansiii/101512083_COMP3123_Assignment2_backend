@@ -1,6 +1,6 @@
 const express = require('express');
-const { registerUser} = require('../controllers/UserController');
-const { loginUser } = require('../controllers/UserController');
+const { registerUser} = require('../controllers/userController');
+const { loginUser } = require('../controllers/userController');
 const router = express.Router(); // create a mini router , so server.js is clean
 
 // POST /api/v1/user/signup
