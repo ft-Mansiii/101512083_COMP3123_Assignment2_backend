@@ -16,10 +16,10 @@ app.use("/uploads", express.static("uploads"));
 app.use(
   cors({
     origin: [
-      "https://101512083-comp-3123-assignment2-frontend-qxouds50n.vercel.app",
+      "https://101512083-comp-3123-assignment2-frontend-aa6hhlgk2.vercel.app",
       "http://localhost:3000",
     ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
