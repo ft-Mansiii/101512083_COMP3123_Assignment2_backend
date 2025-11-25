@@ -12,18 +12,22 @@ const {
   searchEmployees
 } = require("../controllers/employeeController");
 
-// GET
+// GET all employees
 router.get("/", auth, getAllEmployees);
+
+// SEARCH employees
 router.get("/search/by", auth, searchEmployees);
+
+// GET employee by ID
 router.get("/:eid", auth, getEmployeeById);
 
-// CREATE (with image upload)
+// CREATE employee (with image upload)
 router.post("/", auth, upload.single("profileImage"), createEmployee);
 
-// UPDATE (with image upload)
+// UPDATE employee (with image upload)
 router.put("/:eid", auth, upload.single("profileImage"), updateEmployee);
 
-// DELETE
+// DELETE employee
 router.delete("/:eid", auth, deleteEmployee);
 
 module.exports = router;
