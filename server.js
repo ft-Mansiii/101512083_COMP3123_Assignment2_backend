@@ -33,7 +33,7 @@ app.use("/uploads", express.static("uploads"));
 app.use(
   cors({
     origin: [
-      "https://101512083-comp-3123-assignment2-fro-beta.vercel.app/",
+      "https://101512083-comp-3123-assignment2-fro-beta.vercel.app",
       "http://localhost:3000",
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
