@@ -13,10 +13,27 @@ app.use(express.json());
 app.use("/uploads", express.static("uploads"));
 
 // CORS — MUST BE BEFORE ROUTES!!!
+// app.use(
+//   cors({
+//     origin: function (origin, callback) {
+//       if (
+//         !origin ||
+//         origin.includes("localhost") ||
+//         /vercel\.app$/.test(origin)
+//       ) {
+//         callback(null, true);
+//       } else {
+//         callback(new Error("Not allowed by CORS"));
+//       }
+//     },
+//     credentials: true,
+//   })
+// );
+
 app.use(
   cors({
     origin: [
-      "https://101512083-comp-3123-assignment2-fro.vercel.app",
+      "https://101512083-comp-3123-assignment2-fro-beta.vercel.app/",
       "http://localhost:3000",
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
